@@ -20,6 +20,14 @@
 
 // - typeof(#variable)
 //      Muestra el tipo de variable que coloquemos dentro de la funcion
+//
+// Tambien considerar:
+//
+// - Condicionales reducidas
+//      numero1 > numero2 ? numero1 : numero2
+//      Esta es una condicional del numero mayor, primero pondremos una condicional, seguido de un 
+//      signo de interrogacion, despues 2 valores separados por dos puntos, el primero sera en el caso
+//      de que sea positivo, el segundo sera el caso en el que sea negativo
 // #######################################################################
 let maxIntentos = 3;
 let numeroSecreto = parseInt(Math.random()*10)+1;
