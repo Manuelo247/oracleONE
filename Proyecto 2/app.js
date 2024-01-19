@@ -1,0 +1,9 @@
+function intentoDeUsuario(){
+    alert('Click desde el boton')
+}
+
+let titulo = document.querySelector('h1');
+titulo.innerHTML = "Juego del numero secreto"
+
+let parrafo = document.querySelector('p');
+parrafo.innerHTML = "Elige un numero del 1 al 10"
