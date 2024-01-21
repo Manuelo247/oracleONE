@@ -58,8 +58,6 @@ function reiniciarJuego(){
     //Reiniciar caja
     limpiarCaja();
     //Deshabilitar el boton
-    estadoBoton('reiniciar', 'disabled')
-    estadoBoton('intento', 'enabled')    
 }
 
 function condicionesIniciales(){
@@ -97,8 +95,11 @@ function generarNumeroSecreto(){
 
     if (listanumerosSecretos.length >= numeroMax){
         asignarTextoElemento('p', "Ya se sortearon todos los numeros posibles");
-        document.querySelector('#intento').setAttribute('disabled', true);
+        estadoBoton('intento','disabled')
+        estadoBoton('reiniciar','disabled')
     } else {
+        estadoBoton('intento','enabled')
+        estadoBoton('reiniciar','disabled')
         if (listanumerosSecretos.includes(numeroAleatorio)){
             return generarNumeroSecreto();
         } else {
