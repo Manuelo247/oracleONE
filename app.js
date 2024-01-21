@@ -1,7 +1,7 @@
 let numeroSecreto;
 let listanumerosSecretos = [];
 let intentos;
-let numeroMax = 3;
+let numeroMax = 10;
 
 function mostrarVariables(numeroUsuario){
     console.log("Intentos: ", intentos)
@@ -31,9 +31,9 @@ function verificarIntento(){
     } else {
         
         if (numeroUsuario > numeroSecreto){
-            asignarTextoElemento('p', "El numero secreto es menor");
+            asignarTextoElemento('p', "El numero secreto es <b>menor</b>");
         } else {
-            asignarTextoElemento('p', "El numero secreto es mayor");
+            asignarTextoElemento('p', "El numero secreto es <b>mayor</b>");
         }
 
     }
