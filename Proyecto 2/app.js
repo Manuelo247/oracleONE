@@ -1,36 +1,48 @@
 let numeroSecreto;
+let numeroUsuario
+
 let listanumerosSecretos = [];
 let intentos;
-let numeroMax = 3;
+let numeroMax = 10;
+let maxIntentos = 4;
 
-function mostrarVariables(numeroUsuario){
+function mostrarVariables(){
+
     console.log("Intentos: ", intentos)
     console.log("Numero secreto: ", numeroSecreto, typeof(numeroSecreto));
     console.log("Numero de usuario: ",numeroUsuario, typeof(numeroUsuario), '\n');
-    console.log("Adivino? ", numeroSecreto === numeroUsuario);       //El triple igual es mas restrictivo, no solo compara valores si no que 
-    //                                                  //espera que tambien sean del mismo tipo de dato, como el "is" de python
+
+    //El triple igual es mas restrictivo, no solo compara valores si no que 
+    //espera que tambien sean del mismo tipo de dato, como el "is" de python
+    console.log("Adivino? ", numeroSecreto === numeroUsuario);       
+
 }
 
 function verificarIntento(){
-    let numeroUsuario
+    
     intentos++;
 
     numeroUsuario = document.getElementById('numeroUsuario').value; //Aqui buscamos elemento por ID
     numeroUsuario = parseInt(numeroUsuario);
-    mostrarVariables(numeroUsuario)
+    // mostrarVariables()
     limpiarCaja()
     
     if (numeroUsuario === numeroSecreto){
 
-        textoAcertar = "Acertaste, el numero secreto es " + numeroSecreto + ". Lo hiciste en ";
-        textoAcertar += intentos + (intentos > 1 ? " intentos." : " intento.");
+        textoAcertar = `Acertaste, el numero secreto es ${numeroSecreto}. Lo hiciste en ${intentos} ${intentos > 1 ? "intentos." : "intento."}`
         asignarTextoElemento('p', textoAcertar);
 
-        document.getElementById('reiniciar').removeAttribute('disabled'); //removera e atributo disabled para que pueda ser usado
+        estadoBoton('reiniciar', 'enabled')
+        estadoBoton('intento', 'disabled')   
 
     } else {
         
-        if (numeroUsuario > numeroSecreto){
+        if (intentos >= maxIntentos){
+            textoFallar = `Se te acabaron los intentos, el numero era ${numeroSecreto}`
+            asignarTextoElemento('p', textoFallar)
+            estadoBoton('reiniciar', 'enabled')
+            estadoBoton('intento', 'disabled')
+        } else if (numeroUsuario > numeroSecreto){
             asignarTextoElemento('p', "El numero secreto es <b>menor</b>");
         } else {
             asignarTextoElemento('p', "El numero secreto es <b>mayor</b>");
@@ -46,15 +58,24 @@ function reiniciarJuego(){
     //Reiniciar caja
     limpiarCaja();
     //Deshabilitar el boton
-    document.querySelector('#reiniciar').setAttribute('disabled', true);    //Esto al contrario del removeAttribute, crea un atributo, 
-                                                                            //en donde le colocaremos el nombre del atributo y su valor
-
+    estadoBoton('reiniciar', 'disabled')
+    estadoBoton('intento', 'enabled')    
 }
 
 function condicionesIniciales(){
-    asignarTextoElemento('p', `Elige un numero del 1 al ${numeroMax}`);
+    asignarTextoElemento('p', `Elige un numero del 1 al ${numeroMax}.</br> Tienes ${maxIntentos} ${maxIntentos > 1 ? "intentos." : "intento."}`);
     numeroSecreto = generarNumeroSecreto();
     intentos = 0;
+}
+
+function estadoBoton(ID, estado){
+    if (estado == 'disabled'){
+        //Esto al contrario del removeAttribute, crea un atributo, 
+        //en donde le colocaremos el nombre del atributo y su valor
+        document.querySelector(`#${ID}`).setAttribute('disabled', true)
+    } else if (estado == 'enabled'){
+        document.querySelector(`#${ID}`).removeAttribute('disabled')
+    }
 }
 
 function limpiarCaja(){
