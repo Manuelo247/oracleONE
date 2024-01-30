@@ -1,12 +1,12 @@
-body{
-    
+.titulo-principal{
+    padding-left: 30px;
 }
 
 #banner{
     width: 100%;
 }
 
-h1{
+.titulo-centralizado{
     text-align: center;
 }
 
