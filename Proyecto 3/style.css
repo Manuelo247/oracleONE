@@ -1,8 +1,65 @@
-.titulo-principal{
-    padding-left: 30px;
+body{
+    margin: 0;
+}
+
+header{
+    background-color: #BBBBBB;
+    padding: 20px 0;
+}
+
+.caja{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.caja h1{
+    margin: 0;
+}
+
+nav{
+    position: absolute;
+    top: 110px;
+    right: 0;
+    
+
+    /* background-color: white;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    padding: 5px 5px; */
+}
+nav ul{
+    margin: 0;
+}
+
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #c78c19;
+    text-decoration: underline;
+}
+
+main{
+    margin: 0 5%;
+}
+
+.paginaActual{
+    border-bottom: 2px solid #000000;
 }
 
 #banner{
+    padding: 5px 0px;
     width: 100%;
 }
 
@@ -15,38 +72,57 @@ p{
 }
 
 em strong{
-    color: red;
-}
-
-#mision{
-    font-size: 20px;
+    color: #7C0000;
 }
 
 .principal{
+    font-size: 20px;
     background: #CCCCCC;
     padding: 20px;
 }
 
-.diferenciales{
-    background: white;
-    padding: 30px;
+#mision{
+    font-size: 25px;
 }
 
-h2{
-    text-align: center;
+#titulo-diferenciales{
+    font-size: 30px;
+}
+
+.diferenciales{
+    width: 940px;
+    position: relative;
+    margin: 1% auto;
+    background: white;
+    padding: 0% 3%;
+}
+
+.listaDiferenciales{
+    
+    display: inline-block;
+    vertical-align: top;
+    width: 45%;
+    /* margin-right: 25%; */
 }
 
 .item{
+    font-size: 25px;
     font-style: italic;
-}
-
-ul{
-    display: inline-block;
-    vertical-align: top;
-    width: 20%;
-    margin-right: 15%;
+    font-weight: 5px;
 }
 
 .imagenDiferenciales{
     width: 50%;
+}
+
+footer{
+    background: url(img/bg.jpg);
+    text-align: center;
+    padding: 40px;
+}
+
+.copyright{
+    color: #ffffff;
+    font-size: 10px;
+    margin-top: 20px;
 }

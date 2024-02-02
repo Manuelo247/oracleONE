@@ -33,10 +33,19 @@ nav a{
     font-size: 22px;
     text-decoration: none;
 }
+
 nav a:hover{
     color: #c78c19;
     text-decoration: underline;
 }
+
+.paginaActual{
+    border-bottom: 2px solid #000000;
+}
+
+/* main{
+    margin-bottom: 50px;
+} */
 
 .productos{
     width: 940px;
@@ -90,4 +99,16 @@ nav a:hover{
 
 .productos li:hover .producto-precio{
     font-size: 33px;
+}
+
+footer{
+    background: url(img/bg.jpg);
+    text-align: center;
+    padding: 40px;
+}
+
+.copyright{
+    color: #ffffff;
+    font-size: 10px;
+    margin-top: 20px;
 }
