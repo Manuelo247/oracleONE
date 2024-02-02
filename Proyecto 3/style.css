@@ -2,6 +2,8 @@ body{
     margin: 0;
 }
 
+/* #################### Header #################### */
+
 header{
     background-color: #BBBBBB;
     padding: 20px 0;
@@ -49,6 +51,7 @@ nav a:hover{
     color: #c78c19;
     text-decoration: underline;
 }
+/* #################### End of Header #################### */
 
 main{
     margin: 0 5%;
@@ -91,7 +94,8 @@ em strong{
 
 .diferenciales{
     width: 940px;
-    position: relative;
+    margin-left: auto;
+    margin-right: auto; 
     margin: 1% auto;
     background: white;
     padding: 0% 3%;
@@ -115,6 +119,8 @@ em strong{
     width: 50%;
 }
 
+/* #################### Footer #################### */
+
 footer{
     background: url(img/bg.jpg);
     text-align: center;
@@ -126,3 +132,5 @@ footer{
     font-size: 10px;
     margin-top: 20px;
 }
+
+/* #################### End of Footer #################### */
