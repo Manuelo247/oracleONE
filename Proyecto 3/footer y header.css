@@ -28,6 +28,10 @@ nav li{
     margin: 0 0 0 15px;
 }
 
+.paginaActual{
+    border-bottom: 2px solid #000000;
+}
+
 nav a{
     text-transform: uppercase;
     color: #000000;
