@@ -9,8 +9,6 @@
         <link rel="stylesheet" href="style.css">
     </head> 
 
-    <div class="separacion"></div>
-
     <body>
         <header>
             <div class="caja">
@@ -23,12 +21,12 @@
             </div>
         </header>
 
-        <div class="separacion"></div>
+        <div class="separacion" id="separacion-superior"></div>
 
         <main>
-            <img id = "banner" src="img/banner.jpg">
+            <img id="primer-elemento" src="img/banner.jpg">
 
-            <div class="principal">
+            <section class="informacion">
 
                 <h2 class="titulo">Sobre la Barbería Alura</h2> 
 
@@ -42,9 +40,9 @@
                     moda, para así ofrecer a nuestros clientes las últimas tendencias. El atendimiento posee un padrón de excelencia y
                     agilidad, garantizando calidad y satisfacción de nuestros clientes.</p>
 
-            </div>
+            </section>
 
-            <div class="diferenciales">
+            <section class="diferenciales" id="ultimo-elemento">
 
                 <h2 class="titulo" id="titulo-diferenciales" >Diferenciales</h2>
 
@@ -57,12 +55,16 @@
 
                 <img id = "diferenciales" src="img/diferenciales.jpg" class="imagenDiferenciales">
 
-            </div>
+            </section>
         </main>
 
+        <div class="separacion" id="separacion-inferior"></div>
+
         <footer>
-            <h1><a HREF="index.html"><img src="img/logo-blanco.png" alt="Logo de la Barberia Alura"></a> </h1>
-            <p class="copyright">&copy Copyright Barberia Alura - 2024</p>
+            <div class="footer">
+                <h1><a HREF="index.html"><img src="img/logo-blanco.png" alt="Logo de la Barberia Alura"></a> </h1>
+                <p class="copyright">&copy Copyright Barberia Alura - 2024</p>
+            </div>
         </footer>
 
     </body>

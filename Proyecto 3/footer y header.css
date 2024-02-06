@@ -29,13 +29,15 @@ nav a{
     font-size: 22px;
     text-decoration: none;
 
-    transition: 0.1s all;
+    transition: 0.3s all;
 }
 
 nav a:hover{
+    /* padding: 15px; */
     color: darkorange;
+    /* background: rgb(50, 50, 50); */
     text-decoration: underline;
-    font-size: 24px;
+    /* font-size: 22.2px; */
 }
 
 /* #################### End of Header #################### */

@@ -1,12 +1,11 @@
 html {
     font-family: 'Montserrat', sans-serif;
-    font-size: 100%;
 }
 
 body{
     background-image: url(img/bg.jpg);
     color: white;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 header, main, footer{
@@ -46,35 +45,37 @@ nav a{
     font-size: 22px;
     text-decoration: none;
 
-    transition: 0.1s all;
+    transition: 0.3s all;
 }
 
 nav a:hover{
+    /* padding: 15px; */
     color: darkorange;
+    /* background: rgb(50, 50, 50); */
     text-decoration: underline;
-    font-size: 24px;
+    /* font-size: 22.2px; */
 }
 
 /* #################### End of Header #################### */
 
 @media only screen and (min-width: 540px){
-    .caja{
-        padding-left: 5rem;
-        padding-right: 5rem;
+    .caja, form{
+        margin-left: 5rem;
+        margin-right: 5rem;
     }
 }
 
 @media only screen and (min-width: 768px){
-    .caja{
-        padding-left: 10rem;
-        padding-right: 10rem;
+    .caja, form{
+        margin-left: 10rem;
+        margin-right: 10rem;
     }
 }
 
 @media only screen and (min-width: 941px){
-    .caja{
-        padding-left: 15rem;
-        padding-right: 15rem;
+    .caja, form{
+        margin-left: 15rem;
+        margin-right: 15rem;
     }
 }
 
@@ -85,20 +86,32 @@ nav a:hover{
     margin-right: auto;
 }
 
+#separacion-superior{
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+}
+
+#separacion-inferior{
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+}
+
+#primer-elemento{
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#ultimo-elemento{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
 .paginaActual{
     border-bottom: 2px solid #000000;
 }
 
-#banner{
-    padding: 5px 0px;
+img{
     width: 100%;
-}
-
-.titulo{
-    text-align: center;
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 15px;
 }
 
 p{
@@ -109,19 +122,22 @@ em strong{
     font-weight: bold;
 }
 
-.principal{
-    /* font-size: 20px; */
-    /* background: #CCCCCC; */
-    padding: 20px;
+.titulo{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.informacion{
+    padding: 1.25rem;
 }
 
 .diferenciales{
-    width: 940px;
+    padding: 1.25rem;
+    width: 80%;
     margin-left: auto;
     margin-right: auto; 
-    margin: 1% auto;
-    /* background: white; */
-    padding: 0% 3%;
 }
 
 .listaDiferenciales{
@@ -142,12 +158,193 @@ em strong{
     width: 50%;
 }
 
-/* #################### Footer #################### */
+.productos{
+    max-width: 940px;
+    /* position: relative; */
+    margin: 0 auto;
+    /* padding: 5rem; */
+}
 
+.productos li{
+    background: white;
+    color: black;
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.3%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+
+    border: 5px inset #292929;
+    /* border-bottom: 5px groove #292929;
+    border-left: 5px groove #292929; */
+    border-radius: 20px;
+
+}
+
+.productos li:hover{
+    transition: 0.1s all;
+    border-color: #c78c19;
+}
+
+.productos li:hover h2{
+    transition: 0.1s all;
+    font-size: 33px;
+}
+
+.productos li:hover .producto-precio{
+    transition: 0.1s all;
+    font-size: 25px;
+}
+
+.productos li:active{
+    border-color: #088c19;
+}
+
+.productos h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.producto-descripcion{
+    font-size: 18px;
+    /* font-weight: bold; */
+}
+
+.producto-precio{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.separacion{
+    border-bottom: 3px solid #ffffff;
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form legend{
+    font-weight: bold;
+    text-align: center;
+    /* color: darkorange; */
+}
+
+form label{
+    margin: 15px 0px 7px 0;
+    display: inline-block;
+}
+
+.input-padron{
+    display: block;
+    padding: 10px 25px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nombres{
+    display: flex;
+    column-gap: 5%;
+    justify-content: space-between;
+}
+
+.nombres div{
+    width: 45%;
+}
+
+strong{
+    font-weight: bold;
+}
+
+.radio{
+    display: block;
+    margin: 0;
+    padding: 0 0 10px 0;
+    accent-color: darkorange;
+}
+
+fieldset{
+    
+    margin-bottom: 5rem;
+    display: block;
+
+    padding: 2rem;
+    padding-top: 0;
+    border: 2px ridge rgb(192, 192, 192);
+    /* border: 2px ridge rgb(255, 181, 45); */
+
+    border-radius: 6px;
+}
+
+select{
+    display: block;
+    padding: 0.5rem;
+
+    font-size: 15px;
+}
+
+.checkbox{
+    display: block;
+    text-align: center;
+    accent-color: darkorange;
+}
+
+form #submit{
+    width: 40%;
+    padding: 15px 0;
+    /* margin: 30px 0; */
+    margin: 3rem auto 0 auto;
+    /* margin-left: auto;
+    margin-right: auto; */
+
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: orange;
+
+    display: block;
+    border: none;
+    border-radius: 5px;
+
+    transition: 0.1s all;
+    cursor: pointer;
+}
+
+form #submit:hover{
+    background: darkorange;
+    transform: scale(1.05);
+}
+
+table{
+    margin: 3rem auto 3rem auto;
+}
+
+thead{
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td, th{
+    border: 1px solid #000000;
+    padding: 8px 15px;
+    text-align: center;
+}
+
+/* #################### Footer #################### */
 footer{
     background: url(img/bg.jpg);
     text-align: center;
     padding: 40px;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .copyright{
