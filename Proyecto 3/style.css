@@ -126,11 +126,24 @@ em strong{
     text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
 }
 
 .informacion{
     padding: 1.25rem;
+}
+
+.elementos-horizontales{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    column-gap: 2rem;
+}
+
+.elementos-horizontales img{
+    width: 300px;
 }
 
 .diferenciales{
