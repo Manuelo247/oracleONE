@@ -1,26 +1,15 @@
 /* #################### Header #################### */
 
-header{
-    background-color: #BBBBBB;
-    padding: 20px 0;
-}
-
-.caja{
-    width: 940px;
-    position: relative;
-    margin: 0 auto;
+.caja {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav{
-    position: absolute;
-    top: 110px;
-    right: 0;
-    
-
-    /* background-color: white;
-    border: 2px solid #000000;
-    border-radius: 10px;
-    padding: 5px 5px; */
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
 }
 
 nav li{
@@ -29,20 +18,24 @@ nav li{
 }
 
 .paginaActual{
-    border-bottom: 2px solid #000000;
+    text-decoration-line: underline;
+    text-underline-offset: 2px;
 }
 
 nav a{
     text-transform: uppercase;
-    color: #000000;
-    font-weight: bold;
+    color: #ffffff;
+    font-weight: 700;
     font-size: 22px;
     text-decoration: none;
+
+    transition: 0.1s all;
 }
 
 nav a:hover{
-    color: #c78c19;
+    color: darkorange;
     text-decoration: underline;
+    font-size: 24px;
 }
 
 /* #################### End of Header #################### */

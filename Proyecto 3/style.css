@@ -1,37 +1,32 @@
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100%;
+}
+
 body{
-    margin: 0;
+    background-image: url(img/bg.jpg);
+    color: white;
+    font-size: 20px;
+}
+
+header, main, footer{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75rem;
 }
 
 /* #################### Header #################### */
 
-header{
-    background-color: #BBBBBB;
-    padding: 20px 0;
-}
-
-.caja{
-    width: 940px;
-    position: relative;
-    margin: 0 auto;
-}
-
-.caja h1{
-    margin: 0;
+.caja {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav{
-    position: absolute;
-    top: 110px;
-    right: 0;
-    
-
-    /* background-color: white;
-    border: 2px solid #000000;
-    border-radius: 10px;
-    padding: 5px 5px; */
-}
-nav ul{
-    margin: 0;
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
 }
 
 nav li{
@@ -39,22 +34,55 @@ nav li{
     margin: 0 0 0 15px;
 }
 
+.paginaActual{
+    text-decoration-line: underline;
+    text-underline-offset: 2px;
+}
+
 nav a{
     text-transform: uppercase;
-    color: #000000;
-    font-weight: bold;
+    color: #ffffff;
+    font-weight: 700;
     font-size: 22px;
     text-decoration: none;
+
+    transition: 0.1s all;
 }
 
 nav a:hover{
-    color: #c78c19;
+    color: darkorange;
     text-decoration: underline;
+    font-size: 24px;
 }
+
 /* #################### End of Header #################### */
 
-main{
-    margin: 0 5%;
+@media only screen and (min-width: 540px){
+    .caja{
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .caja{
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+}
+
+@media only screen and (min-width: 941px){
+    .caja{
+        padding-left: 15rem;
+        padding-right: 15rem;
+    }
+}
+
+.separacion{
+    border-bottom: 3px solid #ffffff;
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .paginaActual{
@@ -66,30 +94,25 @@ main{
     width: 100%;
 }
 
-.titulo-centralizado{
+.titulo{
     text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 
 p{
-    text-align: center;
+    margin-bottom: 25px;
 }
 
 em strong{
-    color: #7C0000;
+    font-weight: bold;
 }
 
 .principal{
-    font-size: 20px;
-    background: #CCCCCC;
+    /* font-size: 20px; */
+    /* background: #CCCCCC; */
     padding: 20px;
-}
-
-#mision{
-    font-size: 25px;
-}
-
-#titulo-diferenciales{
-    font-size: 30px;
 }
 
 .diferenciales{
@@ -97,7 +120,7 @@ em strong{
     margin-left: auto;
     margin-right: auto; 
     margin: 1% auto;
-    background: white;
+    /* background: white; */
     padding: 0% 3%;
 }
 
@@ -110,9 +133,9 @@ em strong{
 }
 
 .item{
-    font-size: 25px;
     font-style: italic;
     font-weight: 5px;
+    padding-bottom: 10px;
 }
 
 .imagenDiferenciales{

@@ -3,34 +3,34 @@
 <html lang="es">
 
     <head>
-
         <meta charset="UTF-8">
         <title>Barbería Alura</title>
+        <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
-        <!-- <link rel="stylesheet" href="footer y header.css"> -->
-
     </head> 
+
+    <div class="separacion"></div>
 
     <body>
         <header>
             <div class="caja">
-                <h1><img src="img/logo.png"></h1>
+                <h1><a HREF="index.html"><img src="img/logo-blanco.png" alt="Logo de la Barberia Alura"></a> </h1>
                 <nav>
-                    <ul>
-                        <li class="paginaActual"><a HREF="index.html">Home</a></li>
-                        <li><a HREF="productos.html">Productos</a></li>
-                        <li><a HREF="contacto.html">Contacto</a></li>
-                    </ul>
+                        <a class="paginaActual" HREF="index.html">Home</a>
+                        <a HREF="productos.html">Productos</a>
+                        <a HREF="contacto.html">Contacto</a>
                 </nav>
             </div>
         </header>
+
+        <div class="separacion"></div>
 
         <main>
             <img id = "banner" src="img/banner.jpg">
 
             <div class="principal">
 
-                <h2 class="titulo-centralizado">Sobre la Barbería Alura</h2> 
+                <h2 class="titulo">Sobre la Barbería Alura</h2> 
 
                 <p>Ubicada en el corazón de la ciudad, la <strong>Barbería Alura</strong> trae para el mercado lo que hay de mejor para
                     su cabello y barba. Fundada en 2020, la Barbería Alura ya es destaque en la ciudad y conquista nuevos clientes
@@ -46,10 +46,10 @@
 
             <div class="diferenciales">
 
-                <h2 class="titulo-centralizado" id="titulo-diferenciales" >Diferenciales</h2>
+                <h2 class="titulo" id="titulo-diferenciales" >Diferenciales</h2>
 
                 <ul class="listaDiferenciales">
-                    <li class = "item">Atencion personalizada para los clientes</li>
+                    <li class = "item">Atencion personalizada</li>
                     <li class = "item">Espacio diferenciado</li>
                     <li class = "item">Localizacion</li>
                     <li class = "item">Profesionales calificados</li>
@@ -61,11 +61,9 @@
         </main>
 
         <footer>
-            <h1><img src="img/logo-blanco.png"></h1>
+            <h1><a HREF="index.html"><img src="img/logo-blanco.png" alt="Logo de la Barberia Alura"></a> </h1>
             <p class="copyright">&copy Copyright Barberia Alura - 2024</p>
         </footer>
-
-        
 
     </body>
 

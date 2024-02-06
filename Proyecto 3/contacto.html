@@ -7,7 +7,6 @@
         <meta charset="UTF-8">
         <title>Contacto - Barbería Alura</title>
         <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="footer y header.css">
         <link rel="stylesheet" href="contacto.css">
         
 
@@ -16,23 +15,110 @@
 
         <header>
             <div class="caja">
-                <h1><img src="img/logo.png"></h1>
+                <h1><a HREF="index.html"><img src="img/logo-blanco.png" alt="Logo de la Barberia Alura"></a> </h1>
                 <nav>
-                    <ul>
-                        <li><a HREF="index.html">Home</a></li>
-                        <li><a HREF="productos.html">Productos</a></li>
-                        <li class="paginaActual"><a HREF="contacto.html">Contacto</a></li>
-                    </ul>
+                        <a HREF="index.html">Home</a>
+                        <a HREF="productos.html">Productos</a>
+                        <a class="paginaActual" HREF="contacto.html">Contacto</a>
                 </nav>
             </div>
         </header>
 
-        <main>
+        <div class="separacion"></div>
 
+        <main>
+            <form>
+
+                <fieldset>
+                    <legend>Datos personales</legend>
+                    <div class="nombres">
+                        <div>
+                            <label for="primerNombre">Primer <strong>nombre</strong>:</label>
+                            <input class="input-padron" id="primerNombre" type="text" required>
+                        </div>
+                        <div>
+                            <label  for="segundoNombre">Segundo <strong>nombre</strong>:</label>
+                            <input class="input-padron"  id="segundoNombre" type="text">
+                        </div>
+                    </div>
+
+                    <div class="nombres">
+                        <div>
+                            <label for="primerApellido">Primer <strong>apellido</strong>:</label>
+                            <input class="input-padron" id="primerApellido" type="text" required>
+                        </div>
+                        
+                        <div>
+                            <label for="segundoApellido">Segundo <strong>apellido</strong>:</label>
+                            <input class="input-padron" id="segundoApellido" type="text">
+                        </div>
+                    </div>
+
+                    <label for="correoElectronico">Correo electronico:</label>
+                    <input id="correoElectronico" type="email" class="input-padron" required placeholder="email@dominio.com">
+
+                    <label for="telefono">Telefono:</label>
+                    <input id="telefono" type="tel" class="input-padron" required placeholder="(XX) XXXX XXXX">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Información adicional</legend>
+
+                    <label for="Mensaje">Mensaje:</label>
+                    <textarea id="Mensaje" cols="70" rows="10" class="input-padron" required></textarea>
+
+                    <label>¿Cómo le gustaría que lo contactemos?</label>
+                    <label class="radio" for="radio-email"><input id="radio-email" name="formaContacto" value="email" type="radio">Email</label>
+
+                    <label class="radio" for="radio-telefono"><input id="radio-telefono" name="formaContacto" value="telefono" type="radio">Teléfono</label>
+
+                    <label class="radio" for="radio-whatsapp"><input id="radio-whatsapp" name="formaContacto" value="whatsapp" type="radio" checked>Whatsapp</label>
+
+                    <label>¿En cuál horario prefiere ser atendido?</label>
+                    <select required>
+                        <option value selected disabled>Seleccione una opción</option>
+                        <option>Mañana</option>
+                        <option>Tarde</option>
+                        <option>Noche</option>
+                    </select>
+                    
+                    <label class="checkbox"><input type="checkbox" checked> ¿Le gustaría recibir novedades de la Barbería Alura?</label>
+
+                </fieldset>
+
+                
+                <input id="submit" type="submit" value="Enviar Formulario">
+            </form>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dia</td>
+                        <th>Horario</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Lunes</td>
+                        <td>08h ~ 20h</td>
+                    </tr>
+                    <tr>
+                        <td>Miercoles</td>
+                        <td>08h ~ 20h</td>
+                    </tr>
+                    <tr>
+                        <td>Viernes</td>
+                        <td>08h ~ 20h</td>
+                    </tr>
+                </tbody>
+            </table>
         </main>
 
+        <div class="separacion"></div>
+
         <footer>
-            <h1><img src="img/logo-blanco.png"></h1>
+            <h1><a HREF="index.html"><img src="img/logo-blanco.png" alt="Logo de la Barberia Alura"></a> </h1>
             <p class="copyright">&copy Copyright Barberia Alura - 2024</p>
         </footer>
 

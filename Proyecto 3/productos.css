@@ -1,20 +1,63 @@
-/* main{
-    margin-bottom: 50px;
-} */
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100%;
+}
+
+body{
+    background-image: url(img/bg.jpg);
+    color: white;
+    font-size: 20px;
+}
+
+header, main, footer{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75rem;
+}
+
+@media only screen and (min-width: 540px){
+    .caja{
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .caja{
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+}
+
+@media only screen and (min-width: 941px){
+    .caja{
+        padding-left: 15rem;
+        padding-right: 15rem;
+    }
+}
+
+.separacion{
+    border-bottom: 3px solid #ffffff;
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .productos{
     width: 940px;
-    position: relative;
+    /* position: relative; */
     margin: 0 auto;
-    padding: 50px;
+    padding: 40px;
 }
 
 .productos li{
+    background: white;
+    color: black;
     display: inline-block;
     text-align: center;
     width: 30%;
     vertical-align: top;
-    margin: 0 1.5%;
+    margin: 0 1.4%;
     padding: 30px 20px;
     box-sizing: border-box;
 
@@ -22,10 +65,22 @@
     border-bottom: 3px solid #000000;
     border-left: 3px solid #000000;
     border-radius: 20px;
+
 }
 
 .productos li:hover{
+    transition: 0.1s all;
     border-color: #c78c19;
+}
+
+.productos li:hover h2{
+    transition: 0.1s all;
+    font-size: 33px;
+}
+
+.productos li:hover .producto-precio{
+    transition: 0.1s all;
+    font-size: 25px;
 }
 
 .productos li:active{
@@ -37,10 +92,6 @@
     font-weight: bold;
 }
 
-.productos li:hover h2{
-    font-size: 33px;
-}
-
 .producto-descripcion{
     font-size: 18px;
     /* font-weight: bold; */
@@ -50,8 +101,4 @@
     font-size: 20px;
     font-weight: bold;
     margin-top: 10px;
-}
-
-.productos li:hover .producto-precio{
-    font-size: 33px;
 }
