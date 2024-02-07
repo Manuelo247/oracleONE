@@ -4,6 +4,7 @@
 
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
         <title>Barbería Alura</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
@@ -15,25 +16,25 @@
             <div class="caja">
                 <h1><a HREF="index.html"><img src="img/logo-blanco.png" alt="Logo de la Barberia Alura"></a> </h1>
                 <nav>
-                        <a class="paginaActual" HREF="index.html">Home</a>
+                        <a HREF="index.html">Home</a>
                         <a HREF="productos.html">Productos</a>
-                        <a HREF="contacto.html">Contacto</a>
+                        <a class="paginaActual" HREF="contacto.html">Contacto</a>
                 </nav>
             </div>
         </header>
 
-        <div class="separacion" id="separacion-superior"></div>
+        <div class="separacion"></div>
 
         <main>
 
-            <section id="primer-elemento"><img  src="img/banner.jpg"></section>
+            <section><img  src="img/banner.jpg"></section>
 
             <section class="informacion">
 
                 <h2 class="titulo">Sobre la Barbería Alura</h2> 
 
                 <div class="elementos-horizontales">
-                    <img src="img/utensilios.jpg" alt="Utensilios de barbero">
+                    <img id="utensilios" src="img/utensilios.jpg" alt="Utensilios de barbero">
 
                     <div>
                         <p>Ubicada en el corazón de la ciudad, la <strong>Barbería Alura</strong> trae para el mercado lo que hay de mejor para
@@ -52,21 +53,25 @@
             <section class="mapa">
                 <h3 class="titulo">Nuestra Ubicacion</h3>
                 <p>Nuestro establecimiento esta ubicado en el corazón de la ciudad</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6277.907609754828!2d-103.35092201631207!3d20.67499364552381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b1fcfce6a9af%3A0x74ca2e328c47ab39!2sParque%20Revoluci%C3%B3n!5e0!3m2!1ses!2smx!4v1707263462824!5m2!1ses!2smx" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6277.907609754828!2d-103.35092201631207!3d20.67499364552381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b1fcfce6a9af%3A0x74ca2e328c47ab39!2sParque%20Revoluci%C3%B3n!5e0!3m2!1ses!2smx!4v1707263462824!5m2!1ses!2smx" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </section>
 
-            <section class="diferenciales" id="ultimo-elemento">
+            <section class="diferenciales">
 
                 <h2 class="titulo" id="titulo-diferenciales" >Diferenciales</h2>
 
-                <ul class="listaDiferenciales">
-                    <li class = "item">Atencion personalizada</li>
-                    <li class = "item">Espacio diferenciado</li>
-                    <li class = "item">Localizacion</li>
-                    <li class = "item">Profesionales calificados</li>
-                </ul>
-
-                <img id = "diferenciales" src="img/diferenciales.jpg" class="imagenDiferenciales">
+                <div class="elementos-horizontales">
+                    <ul class="listaDiferenciales">
+                        <li class = "item">Atencion personalizada</li>
+                        <li class = "item">Espacio diferenciado</li>
+                        <li class = "item">Localizacion</li>
+                        <li class = "item">Profesionales calificados</li>
+                        <li class = "item">Puntualidad</li>
+                        <li class = "item">Limpieza</li>
+                    </ul>
+    
+                    <img id = "diferenciales" src="img/diferenciales.jpg" class="imagenDiferenciales">
+                </div>
 
                 <div class="video">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/wcVVXUV0YUY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -75,7 +80,7 @@
             </section>
         </main>
 
-        <div class="separacion" id="separacion-inferior"></div>
+        <div class="separacion"></div>
 
         <footer>
             <div class="footer">

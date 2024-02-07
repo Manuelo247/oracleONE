@@ -8,18 +8,18 @@ body{
     font-size: 1.25rem;
 }
 
-header, main, footer{
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 75rem;
-}
-
 /* #################### Header #################### */
 
 .caja {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    column-gap: 15vw;
+}
+
+.caja img:hover{
+    transition: 0.2s;
+    opacity: 90%;
 }
 
 nav{
@@ -58,27 +58,6 @@ nav a:hover{
 
 /* #################### End of Header #################### */
 
-@media only screen and (min-width: 540px){
-    .caja, form{
-        margin-left: 5rem;
-        margin-right: 5rem;
-    }
-}
-
-@media only screen and (min-width: 768px){
-    .caja, form{
-        margin-left: 10rem;
-        margin-right: 10rem;
-    }
-}
-
-@media only screen and (min-width: 941px){
-    .caja, form{
-        margin-left: 15rem;
-        margin-right: 15rem;
-    }
-}
-
 .separacion{
     border-bottom: 3px solid #ffffff;
     max-width: 85%;
@@ -86,22 +65,22 @@ nav a:hover{
     margin-right: auto;
 }
 
-#separacion-superior{
+.separacion:first-of-type{
     margin-top: 1rem;
     margin-bottom: 5rem;
 }
 
-#separacion-inferior{
+.separacion:last-of-type{
     margin-top: 5rem;
     margin-bottom: 1rem;
 }
 
-#primer-elemento{
+main section:first-child{
     margin-top: 0;
     padding-top: 0;
 }
 
-#ultimo-elemento{
+main section:last-child{
     margin-bottom: 0;
     padding-bottom: 0;
 }
@@ -142,7 +121,7 @@ section{
     column-gap: 2rem;
 }
 
-.elementos-horizontales img{
+#utensilios{
     width: 235px;
 }
 
@@ -154,17 +133,22 @@ section{
 }
 
 .listaDiferenciales{
-    
     display: inline-block;
-    vertical-align: top;
-    width: 45%;
-    /* margin-right: 25%; */
-}
+    /* width: 50%; */
+} 
 
 .item{
     font-style: italic;
     font-weight: 5px;
     padding-bottom: 10px;
+}
+
+.item:first-child{
+    font-weight: bold;
+}
+
+.item:before{
+    content:"💈"
 }
 
 .imagenDiferenciales{
@@ -174,6 +158,12 @@ section{
 .video{
     padding: 1.4rem;
     text-align: center;
+}
+
+.video iframe{
+    width: 560px;
+    height: 315px;
+    max-width: 100%;
 }
 
 .productos{
@@ -234,13 +224,6 @@ section{
     font-size: 20px;
     font-weight: bold;
     margin-top: 10px;
-}
-
-.separacion{
-    border-bottom: 3px solid #ffffff;
-    max-width: 85%;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 form legend{
@@ -365,6 +348,11 @@ footer{
     justify-content: center;
 }
 
+.footer img:hover{
+    transition: 0.2s;
+    opacity: 90%;
+}
+
 .copyright{
     color: #ffffff;
     font-size: 10px;
@@ -372,3 +360,59 @@ footer{
 }
 
 /* #################### End of Footer #################### */
+@media only screen and (max-width: 680px){
+    
+    body, nav a, .titulo{
+        font-size: 16px;
+    }
+} 
+
+@media only screen and (max-width: 768px){
+
+    .caja, form{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .informacion > div{
+        display: block;
+    }
+
+    #utensilios{
+        width: 50%;
+        float: left;
+    }
+} 
+
+@media only screen and (min-width: 1023px){
+    main, footer, form{
+        margin-left: 10rem;
+        margin-right: 10rem;
+    }
+} 
+
+@media only screen and (max-width: 1023px){
+    main{
+        margin: 0 1rem
+    }
+}
+
+@media only screen and (min-width: 1441px){
+ 
+    main, footer{
+        padding: 0 15rem;
+    }
+
+}
+
+@media only screen and (min-width: 1680px){
+ 
+     main, footer{
+        padding: 0 30rem;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 75rem;
+    }
+
+}
