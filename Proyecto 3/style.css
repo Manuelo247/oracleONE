@@ -1,5 +1,5 @@
 html {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Monserrat', sans-serif;
 }
 
 body{
@@ -115,22 +115,22 @@ img{
 }
 
 p{
-    margin-bottom: 25px;
+    margin: 1.25rem 0;
 }
 
 em strong{
     font-weight: bold;
 }
 
-.titulo{
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
+section{
+    padding: 1.5rem 0;
 }
 
-.informacion{
-    padding: 1.25rem;
+.titulo{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
 }
 
 .elementos-horizontales{
@@ -143,7 +143,7 @@ em strong{
 }
 
 .elementos-horizontales img{
-    width: 300px;
+    width: 235px;
 }
 
 .diferenciales{
@@ -169,6 +169,11 @@ em strong{
 
 .imagenDiferenciales{
     width: 50%;
+}
+
+.video{
+    padding: 1.4rem;
+    text-align: center;
 }
 
 .productos{
