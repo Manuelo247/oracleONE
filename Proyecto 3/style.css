@@ -7,14 +7,26 @@ body{
     color: white;
     font-size: 1.25rem;
 }
-
 /* #################### Header #################### */
 
-.caja {
-    display: flex;
-    justify-content: center;
+.caja{
+
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 74rem;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     align-items: center;
-    column-gap: 15vw;
+}
+
+.caja img{
+    width: 50%;
+    
+}
+
+.caja h1{
+    text-align: center;
 }
 
 .caja img:hover{
@@ -26,11 +38,12 @@ nav{
     display: flex;
     flex-direction: row;
     column-gap: 1rem;
+    align-items: center;
+    justify-content: center;
 }
 
-nav li{
-    display: inline;
-    margin: 0 0 0 15px;
+nav a{
+    display: inline-block;
 }
 
 .paginaActual{
@@ -83,10 +96,6 @@ main section:first-child{
 main section:last-child{
     margin-bottom: 0;
     padding-bottom: 0;
-}
-
-.paginaActual{
-    border-bottom: 2px solid #000000;
 }
 
 img{
@@ -360,59 +369,3 @@ footer{
 }
 
 /* #################### End of Footer #################### */
-@media only screen and (max-width: 680px){
-    
-    body, nav a, .titulo{
-        font-size: 16px;
-    }
-} 
-
-@media only screen and (max-width: 768px){
-
-    .caja, form{
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .informacion > div{
-        display: block;
-    }
-
-    #utensilios{
-        width: 50%;
-        float: left;
-    }
-} 
-
-@media only screen and (min-width: 1023px){
-    main, footer, form{
-        margin-left: 10rem;
-        margin-right: 10rem;
-    }
-} 
-
-@media only screen and (max-width: 1023px){
-    main{
-        margin: 0 1rem
-    }
-}
-
-@media only screen and (min-width: 1441px){
- 
-    main, footer{
-        padding: 0 15rem;
-    }
-
-}
-
-@media only screen and (min-width: 1680px){
- 
-     main, footer{
-        padding: 0 30rem;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 75rem;
-    }
-
-}
