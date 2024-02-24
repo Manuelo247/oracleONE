@@ -92,11 +92,54 @@
 
 @media only screen and (max-width: 426px){
 
-    .caja a{
+
+
+    .caja a, .item{
         font-size: 16px;
     }
 
+    .titulo, .productos h2, .producto-precio{
+        font-size: 18px;
+    }
+    p, .producto-descripcion{
+        font-size: 14px;
+    }
+
+    #utensilios{
+        margin: 0 15px 10px 0;
+    }
+
+    section, .titulo{
+        padding: 0px 5px;
+    }
+
+    .listaDiferenciales, footer h1, .productos h2, .producto-precio, .producto-descripcion{
+        margin: 5px 0;
+    }
+
+    .imagenDiferenciales{
+        display: None;
+    }
+
+    .video{
+        display: contents;
+        width: 70vw;
+    }
+
+    .productos{
+        padding: 0;
+        width: 60vw;
+    }
+
     form #submit{
+        width: 70%;
+    }
+
+    footer{
+        padding: 5px 0;
+    }
+
+    footer img{
         width: 70%;
     }
 
